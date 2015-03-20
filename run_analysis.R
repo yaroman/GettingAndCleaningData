@@ -2,14 +2,14 @@
 if(!file.exists("./data")) { dir.create(./data) }
 
 #------------Load and renames activities labels
-activity_labels <-read.table("data/UCI_HAR_Dataset/activity_labels.txt", stringsAsFactors=FALSE)
+activity_labels <-read.table("UCI_HAR_Dataset/activity_labels.txt", stringsAsFactors=FALSE)
 names(activity_labels) = c("activityNo","activity")
 
 #--------------Test Set Loading. Merging data, subjects, and activities--------------
-testX <-read.table("data/UCI_HAR_Dataset/test/X_test.txt")
-testY <-read.table("data/UCI_HAR_Dataset/test/y_test.txt")
+testX <-read.table("UCI_HAR_Dataset/test/X_test.txt")
+testY <-read.table("UCI_HAR_Dataset/test/y_test.txt")
 names(testY) = "activityNo"
-testS <-read.table("data/UCI_HAR_Dataset/test/subject_test.txt")
+testS <-read.table("UCI_HAR_Dataset/test/subject_test.txt")
 names(testS) = "subject"
 test <-cbind(cbind(testS,testY),testX)
 test <- merge(activity_labels, test, by="activityNo", all=TRUE, sort=FALSE)
@@ -18,10 +18,10 @@ test <- test[,c(-1)]
 
 
 #-------------Train Set. Merging data, subjects, and activities-----------
-trainX <-read.table("data/UCI_HAR_Dataset/train/X_train.txt")
-trainY <-read.table("data/UCI_HAR_Dataset/train/y_train.txt")
+trainX <-read.table("UCI_HAR_Dataset/train/X_train.txt")
+trainY <-read.table("UCI_HAR_Dataset/train/y_train.txt")
 names(trainY) = "activityNo"
-trainS <-read.table("data/UCI_HAR_Dataset/train/subject_train.txt")
+trainS <-read.table("UCI_HAR_Dataset/train/subject_train.txt")
 names(trainS) = "subject"
 train <-cbind(cbind(trainS,trainY),trainX)
 train <- merge(activity_labels, train, by="activityNo", all=TRUE, sort=FALSE)
@@ -70,8 +70,6 @@ all.selected.aggregated.melted <- arrange(all.selected.aggregated.melted, subjec
 
 
 #----Writing final data to CSV
-
-if(!file.exists("./data")) { dir.create(./data) }
 #write.csv(all.selected.aggregated.melted, "data/cleanData.csv",row.names=FALSE)
 
 write.table(all.selected.aggregated.melted, "data/cleanData.txt",row.names=FALSE)

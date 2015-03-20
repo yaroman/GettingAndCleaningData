@@ -14,7 +14,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 This is a link to the data for the project: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The data should be downloaded and unzipped into the "./data/UCI_HAR_Dataset" folder of your working directory.
+The data should be downloaded and unzipped into the "UCI_HAR_Dataset" folder of your working directory.
 
 The script "run_analysis.R"" will read in the necessary data, process, and output the tidy dataset in the file ./data/cleanData.txt.
 
