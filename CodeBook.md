@@ -45,12 +45,17 @@ Steps performed by the "run_analysis.R":
 11. Export the tidy data set into the csv file. 
 
 -----------------------------------------------------------------------
- Output data set review
+ Output data set review:
+ 
  'data.frame':   11880 obs. of  4 variables:
  $ subject : int  1 1 1 1 1 1 1 1 1 1 ...
+ 
  $ activity: chr  "LAYING" "LAYING" "LAYING" "LAYING" ...
+ 
  $ variable: Factor w/ 66 levels "timeAccelerationMeanX",..: 1 2 3 4 5 6 7 8 9 10 ...
+ 
  $ value   : num  0.2216 -0.0405 -0.1132 -0.9281 -0.8368 ...
+ 
 
 Variable column values (all numeric) which represent all selected measurement types generated in the step 8:
 
