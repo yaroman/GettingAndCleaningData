@@ -3,7 +3,7 @@
 This repository cotains the following files:
 - run_analysis.R
 - CodeBook.md
-- cleanData.csv
+- cleanData.txt
 - README.md
 
 The data represents data collected from the accelerometers from the Samsung Galaxy S smartphone. 
@@ -16,7 +16,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The data should be downloaded and unzipped into the "./data/UCI_HAR_Dataset" folder of your working directory.
 
-The script "run_analysis.R"" will read in the necessary data, process, and output the tidy dataset in the file ./data/cleanData.csv.
+The script "run_analysis.R"" will read in the necessary data, process, and output the tidy dataset in the file ./data/cleanData.txt.
 
 These are the steps the script executes:
 1. Reads files in.

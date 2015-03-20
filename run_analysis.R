@@ -72,5 +72,7 @@ all.selected.aggregated.melted <- arrange(all.selected.aggregated.melted, subjec
 #----Writing final data to CSV
 
 if(!file.exists("./data")) { dir.create(./data) }
-write.csv(all.selected.aggregated.melted, "data/cleanData.csv",row.names=FALSE)
+#write.csv(all.selected.aggregated.melted, "data/cleanData.csv",row.names=FALSE)
+
+write.table(all.selected.aggregated.melted, "data/cleanData.txt",row.names=FALSE)
 

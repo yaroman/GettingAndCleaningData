@@ -42,7 +42,7 @@ Steps performed by the "run_analysis.R":
 
 10.Re-ordering the output data set by "subject" and "activity"
 
-11. Export the tidy data set into the csv file. 
+11. Export the tidy data set into the txt file. 
 
 -----------------------------------------------------------------------
  Output data set review:
